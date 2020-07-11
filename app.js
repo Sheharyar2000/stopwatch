@@ -24,9 +24,11 @@ function timer () {
 
 function start(){
   interval=setInterval(timer,10)
+  document.getElementById("startBtn").disabled = true;
 }
 function stop(){
   clearInterval(interval)
+  document.getElementById("startBtn").disabled = false;
 }
 function reset(){
   min=0;
@@ -37,4 +39,5 @@ function reset(){
   msecHeading.innerHTML=msec;
 
   clearInterval(interval)
+  document.getElementById("startBtn").disabled = false;
 }
